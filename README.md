@@ -3,6 +3,8 @@
 ruboty handler.
 increment decrement scorekeeper
 
+![](https://www.evernote.com/shard/s4/sh/735a955e-0b8f-4b92-b5fa-fc37e0aa1d50/373f7227962198cfdbf0f2721813d3e5/deep/0/Slack.png)
+
 ```
 > r7kamura++
 incremented r7kamura (1 pt)
