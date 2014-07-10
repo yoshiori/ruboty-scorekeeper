@@ -16,12 +16,12 @@ module Ruboty
 
       on( /scorekeeper$|show(?: me)?(?: the)? (?:scorekeeper|scoreboard)$/i,
         name: "scoreboard",
-        description: "Show current point of {name}",
+        description: "Show scoreboard",
       )
 
       on( /scorekeeper (?<name>.+)$|what(?:'s| is)(?: the)? score of (?<name>.+)\??$/i,
         name: "score",
-        description: "Show current point of {name}",
+        description: "Show current point of <name>",
       )
       private
 
