@@ -22,6 +22,12 @@ module Ruboty
       on( /scorekeeper (?<name>.+)$|what(?:'s| is)(?: the)? score of (?<name>.+)\??$/i,
         name: "score",
         description: "Show current point of <name>",
+        missing: true
+      )
+
+      on( /scorekeeper delete (?<name>.+)/i,
+        name: "delete",
+        description: "Delete a point of <name>",
       )
       private
 
@@ -53,6 +59,15 @@ module Ruboty
             "#{index} : #{data.first} (#{data.last} pt)"
           }.join("\n")
         )
+      end
+
+      def delete(message)
+        name = normalize_name(message[:name])
+        if scores.delete(name)
+          message.reply("deleted a point of #{name}")
+        else
+          message.reply("#{name} is not found")
+        end
       end
 
       def scores

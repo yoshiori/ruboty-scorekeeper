@@ -29,6 +29,7 @@ decremented yoshiori (-1 pt)
 * show scoreboard - Show scoreboard
 * scorekeeper {name} - Show current point of {name}
 * what's the score of {name} - Show current point of {name}
+* scorekeeper delete {name} - Delete a point of {name}
 
 ## Contributing
 
