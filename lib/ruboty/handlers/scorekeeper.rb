@@ -3,12 +3,12 @@ module Ruboty
     class Scorekeeper < Base
       NAMESPACE = "scorekeeper"
 
-      on( /(?<name>.+(?:[^+]))\+\+$/,
+      on( /(?<name>.+[^+])\+\+$/,
         name: "increment",
         description: "Increment <name>'s point",
         all: true,
       )
-      on( /(?<name>.+(?:[^-]))\-\-$/,
+      on( /(?<name>.+[^-])\-\-$/,
         name: "decrement",
         description: "Decrement <name>'s point",
         all: true,
